@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStore, applyMiddleware, compose} from 'redux';
-import reducer from '../reducers';
+import rootReducer from '../reducers';
 //import {devToolsEnhancer} from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -15,7 +15,7 @@ const enhancer = composeWithDevTools(
     //window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 
-  const storeWithMiddleware = createStore(reducer, enhancer)
+  const storeWithMiddleware = createStore(rootReducer, enhancer)
 //const storeWithMiddleware = createStore(reducer, devToolsEnhancer(), applyMiddleware(ReduxThunk, logger))
 
 export default storeWithMiddleware
