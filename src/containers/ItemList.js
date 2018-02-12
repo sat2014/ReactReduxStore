@@ -23,7 +23,7 @@ class ItemList extends Component {
         return (
             <div className="cotainer">
                 <form>
-                    
+
                     <div className="field is-grouped">
                         <div className="control">
                             <button
@@ -32,40 +32,24 @@ class ItemList extends Component {
                                 e.preventDefault();
                                 this
                                     .props
-                                    .fetchData('http://599167402df2f40011e4929a.mockapi.io/items');
-                            }}>Get List from Mock API</button>
+                                    .fetchData('http://localhost:3333/olympics2018_winners_from_norway');
+                            }}>Winter Olympics Medal Winners (Norway)</button>
                         </div>
                     </div>
                 </form>
-                <div className="is-grouped">
-                {/* <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                        <a class="tag is-link">Technology</a>
-                        <a class="tag is-delete"></a>
-                        </div>
-                    </div>
 
-                    <div class="control">
-                        <div class="tags has-addons">
-                        <a class="tag is-link">CSS</a>
-                        <a class="tag is-delete"></a>
+                {this
+                    .props
+                    .items
+                    .map((item) => (
+                        <div key={item.id} className="tags has-addons">
+                            <span className="tag is-white">
+                                {item.label}
+                            </span>
+                            <button className="delete"></button>
                         </div>
-                    </div>
-                </div> */}
-                    <ul>
-                        {this
-                            .props
-                            .items
-                            .map((item) => (
-                                <li key={item.id}>
-                                    {item.label}
-                                </li>
-                            ))}
-                    </ul>
-                </div>
+                    ))}
             </div>
-
         );
     }
 }

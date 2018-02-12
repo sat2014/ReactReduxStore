@@ -22,7 +22,7 @@ class DisplayName extends Component {
                 <input
                   className="input"
                   type="text"
-                  placeholder="e.g Ole Kristian"
+                  placeholder="e.g., Ole Kristian"
                   onChange={event => {
                   //this.setState({value: event.target.value})
                   event.preventDefault();

@@ -14,7 +14,7 @@ const App = () => {
     <div className="container">
       <div className="box">
         <h1 className="title is-1 is-spaced ">
-          React-Redux-Store: A (Simple!) Demo
+          React-Redux-Store: A Demo
         </h1>
       </div>
       <div className="tile is-ancestor">
