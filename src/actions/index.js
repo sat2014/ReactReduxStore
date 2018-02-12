@@ -46,7 +46,7 @@ export const itemsFetchData = url => {
       dispatch(itemsIsLoading(true));
 
       fetch(url)
-          .then((response) => {
+          .then(response => {
               if (!response.ok) {
                   throw Error(response.statusText);
               }
@@ -55,8 +55,8 @@ export const itemsFetchData = url => {
 
               return response;
           })
-          .then((response) => response.json())
-          .then((items) => dispatch(itemsFetchDataSuccess(items)))
+          .then(response => response.json())
+          .then(items => dispatch(itemsFetchDataSuccess(items)))
           .catch(() => dispatch(itemsHasErrored(true)));
   };
 }

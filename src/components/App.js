@@ -11,7 +11,7 @@ import ItemList from '../containers/ItemList';
 
 const App = () => {
   return (
-    <div class="container">
+    <div className="container">
       <div className="box">
         <h1 className="title is-1 is-spaced ">
           React-Redux-Store: A (Simple!) Demo

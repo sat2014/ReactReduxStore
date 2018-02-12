@@ -8,11 +8,8 @@ class ItemList extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        this
-            .props
-            .fetchData('http://599167402df2f40011e4929a.mockapi.io/items');
-    }
+    // componentDidMount() {     this         .props
+    // .fetchData('http://599167402df2f40011e4929a.mockapi.io/items'); }
 
     render() {
         if (this.props.hasErrored) {
@@ -25,7 +22,37 @@ class ItemList extends Component {
 
         return (
             <div className="cotainer">
+                <form>
+                    
+                    <div className="field is-grouped">
+                        <div className="control">
+                            <button
+                                className="button is-info"
+                                onClick={(e) => {
+                                e.preventDefault();
+                                this
+                                    .props
+                                    .fetchData('http://599167402df2f40011e4929a.mockapi.io/items');
+                            }}>Get List from Mock API</button>
+                        </div>
+                    </div>
+                </form>
                 <div className="is-grouped">
+                {/* <div class="field is-grouped is-grouped-multiline">
+                    <div class="control">
+                        <div class="tags has-addons">
+                        <a class="tag is-link">Technology</a>
+                        <a class="tag is-delete"></a>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <div class="tags has-addons">
+                        <a class="tag is-link">CSS</a>
+                        <a class="tag is-delete"></a>
+                        </div>
+                    </div>
+                </div> */}
                     <ul>
                         {this
                             .props
