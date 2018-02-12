@@ -24,6 +24,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "ip": "^1.1.5",
+    "nodemon": "^1.14.12",
     "prop-types": "^15.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
